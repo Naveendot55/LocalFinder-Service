@@ -1,11 +1,18 @@
+import * as dotenv from "dotenv";
+import * as path from "path";
+
+const rootDir = path.resolve(__dirname, "../../..");
+const envPath = path.join(rootDir, ".env");
+const result = dotenv.config({ path: envPath });
+
 import app from "./app";
 import { logger } from "./lib/logger";
 
-const rawPort = process.env["PORT"];
+const rawPort = process.env["API_PORT"] || process.env["PORT"];
 
 if (!rawPort) {
   throw new Error(
-    "PORT environment variable is required but was not provided.",
+    "API_PORT or PORT environment variable is required but was not provided.",
   );
 }
 
