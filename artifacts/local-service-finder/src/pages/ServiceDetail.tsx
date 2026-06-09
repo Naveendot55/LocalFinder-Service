@@ -76,7 +76,7 @@ export default function ServiceDetail() {
     return (
       <Layout>
         <div className="flex-1 flex justify-center items-center py-20">
-          <Spinner size="lg" />
+          <Spinner className="h-8 w-8" />
         </div>
       </Layout>
     );

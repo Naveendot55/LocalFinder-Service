@@ -114,7 +114,7 @@ export default function ProviderDashboard() {
           
           <TabsContent value="bookings" className="space-y-4">
             {bookingsLoading ? (
-              <div className="flex justify-center py-12"><Spinner size="lg" /></div>
+              <div className="flex justify-center py-12"><Spinner className="h-8 w-8" /></div>
             ) : !bookings || bookings.length === 0 ? (
               <Card className="text-center py-12 bg-muted/20">
                 <CardContent>
@@ -168,7 +168,7 @@ export default function ProviderDashboard() {
           
           <TabsContent value="services" className="space-y-4">
             {servicesLoading ? (
-              <div className="flex justify-center py-12"><Spinner size="lg" /></div>
+              <div className="flex justify-center py-12"><Spinner className="h-8 w-8" /></div>
             ) : !services || services.length === 0 ? (
               <Card className="text-center py-12 bg-muted/20">
                 <CardContent>

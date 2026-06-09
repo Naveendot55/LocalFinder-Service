@@ -48,8 +48,8 @@ function ReviewDialog({ serviceId, bookingId, onReviewed }: { serviceId: number,
           setOpen(false);
           onReviewed();
         },
-        onError: (err) => {
-          toast({ title: "Failed to submit review", description: err.data?.error || "An error occurred", variant: "destructive" });
+        onError: () => {
+          toast({ title: "Failed to submit review", description: "An error occurred", variant: "destructive" });
         }
       }
     );
@@ -150,7 +150,7 @@ export default function UserDashboard() {
         <p className="text-muted-foreground mb-8">Manage your requested services and bookings.</p>
         
         {isLoading ? (
-          <div className="flex justify-center py-12"><Spinner size="lg" /></div>
+          <div className="flex justify-center py-12"><Spinner className="h-8 w-8" /></div>
         ) : !bookings || bookings.length === 0 ? (
           <Card className="text-center py-12 bg-muted/20">
             <CardContent>

@@ -22,7 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { useLogin, useGetMe } from "@workspace/api-client-react";
+import { useLogin, useGetMe, getGetMeQueryKey } from "@workspace/api-client-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
 
@@ -39,7 +39,7 @@ export default function Login() {
   const { toast } = useToast();
   
   const login = useLogin();
-  const { refetch: refetchMe } = useGetMe({ query: { enabled: false } });
+  const { refetch: refetchMe } = useGetMe({ query: { enabled: false, queryKey: getGetMeQueryKey() } });
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),

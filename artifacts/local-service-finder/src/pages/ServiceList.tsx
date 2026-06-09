@@ -127,7 +127,7 @@ export default function ServiceList() {
           </div>
 
           {isLoading ? (
-            <div className="flex justify-center py-20"><Spinner size="lg" /></div>
+            <div className="flex justify-center py-20"><Spinner className="h-8 w-8" /></div>
           ) : !services || services.length === 0 ? (
             <div className="text-center py-20 bg-muted/20 rounded-lg border border-dashed">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-muted mb-4">

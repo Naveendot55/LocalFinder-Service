@@ -26,7 +26,7 @@ export default function DashboardRedirect() {
   return (
     <Layout>
       <div className="flex-1 flex items-center justify-center min-h-[50vh]">
-        <Spinner size="lg" />
+        <Spinner className="h-8 w-8" />
       </div>
     </Layout>
   );
