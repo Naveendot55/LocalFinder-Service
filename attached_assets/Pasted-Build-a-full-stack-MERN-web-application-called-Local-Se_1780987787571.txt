@@ -1,0 +1,143 @@
+Build a full-stack MERN web application called “Local Service Finder” that connects users with local service providers in their city.
+
+The application should look like a real-world production SaaS product (similar to UrbanClap / JustDial style platform) and must include frontend, backend, database integration, authentication, and role-based access control.
+
+🧠 TECH STACK (STRICT REQUIREMENT)
+Frontend:
+React.js (with React Router)
+Axios for API calls
+Tailwind CSS (modern responsive UI)
+Component-based architecture
+Backend:
+Node.js
+Express.js
+REST API architecture
+Database:
+MongoDB with Mongoose
+Authentication:
+JWT-based authentication
+bcrypt password hashing
+Role-based login system
+👥 USER ROLES
+1. Normal User
+Register / Login
+Browse service categories
+Search services by type or location
+Book a service
+View booking status
+Give ratings and reviews
+2. Service Provider
+Register as provider (electrician, plumber, tutor, etc.)
+Add service listings with description, price, location
+Accept or reject service requests
+View assigned bookings dashboard
+3. Admin (optional but include basic structure)
+View all users and providers
+Approve or reject service listings
+Monitor bookings
+🧩 CORE FEATURES
+🧑‍🔧 Service Listing System
+Category-based services (Electrician, Plumber, Tutor, AC Repair, Home Cleaning, Computer Repair, Salon)
+Search bar for services
+Filter by category and location
+📅 Booking System
+Users can request a service
+Provider receives booking request
+Provider can accept or reject request
+Booking status tracking (Pending / Accepted / Rejected / Completed)
+🔐 Authentication System
+JWT authentication
+Secure login and signup
+Role-based routing (user/provider/admin dashboards)
+Protected routes in React
+🗄️ DATABASE MODELS (MUST IMPLEMENT)
+
+Create MongoDB collections using Mongoose:
+
+Users
+name
+email
+password
+role (user/provider/admin)
+Services
+providerId
+title
+category
+description
+price
+location
+Bookings
+userId
+serviceId
+providerId
+status (pending/accepted/rejected/completed)
+createdAt
+Reviews
+userId
+serviceId
+rating
+comment
+🎨 UI REQUIREMENTS (IMPORTANT)
+Modern SaaS-style UI
+Clean dashboard for each role
+Mobile responsive design
+Landing page with hero section:
+“Find Trusted Local Services Near You”
+Service cards with icons and categories
+Separate dashboards:
+User Dashboard
+Provider Dashboard
+Admin Dashboard
+📊 EXTRA FEATURES (ADD FOR STRONG PROJECT)
+⭐ Ratings & Reviews system
+📍 Location-based filtering
+🔔 Notifications for booking updates
+📱 Fully responsive mobile UI
+📊 Provider dashboard analytics (basic counts of bookings)
+🔎 Search + filter system
+🔥 API STRUCTURE (IMPORTANT)
+
+Create REST APIs:
+
+Auth
+POST /register
+POST /login
+Services
+GET /services
+POST /services (provider only)
+DELETE /services/:id
+Bookings
+POST /bookings
+GET /bookings/user
+GET /bookings/provider
+PUT /bookings/:id (update status)
+Reviews
+POST /reviews
+GET /reviews/:serviceId
+🚀 DEPLOYMENT REQUIREMENT
+
+Project must be structured so it can be easily deployed:
+
+Frontend:
+Deploy on Vercel
+Backend:
+Deploy on Render or Railway
+Database:
+MongoDB Atlas connection
+
+Ensure environment variables are used for:
+
+MongoDB URI
+JWT Secret
+💡 FINAL OUTPUT EXPECTATION
+
+Generate a complete production-ready full-stack project with:
+
+Clean folder structure (client + server)
+Working authentication
+Connected frontend and backend
+MongoDB integration
+Reusable React components
+Deployment-ready code
+
+The project should look like it was built by a real developer for portfolio use.
