@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd artifacts/local-service-finder && pnpm install && pnpm run build",
-  "outputDirectory": "artifacts/local-service-finder/dist/public",
+  "buildCommand": "pnpm install && pnpm run build",
+  "outputDirectory": "./artifacts/local-service-finder/dist/public",
   "framework": "vite",
-  "installCommand": "pnpm install --frozen-lockfile"
+  "installCommand": "pnpm install"
 }
